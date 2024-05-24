@@ -1,91 +1,209 @@
+'use client'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import Blob1 from '../../public/Blob1.svg';
+import Blob2 from '../../public/Blob2.svg';
+import Blob3 from '../../public/Blob3.svg';
+import Blob4 from '../../public/Blob4.svg';
+import Logo from '@/components/Logo';
+import ProjectsNew from './ProjectsNew/page';
+import Testimonials from './Testimonials/page';
+import Contact from './Contact/page';
+import Link from 'next/link';
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import StarsCanvas from '@/components/StarsCanvas';
+import Overview from './Overview/page';
+import { RemotionRoot } from '@/components/animoji/root';
+import { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Virtual, Scrollbar, EffectCreative } from 'swiper/modules';
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const teste = useRef<HTMLDivElement>(null);
+
+  const [isHover, setIsHover] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <main className={styles.main}>
+        <Image src={Blob1} alt='' className={styles.blob1}/>
+        <Image src={Blob2} alt='' className={styles.blob2}/>
+        <Image src={Blob3} alt='' className={styles.blob3}/>
+        <Image src={Blob4} alt='' className={styles.blob4}/>
+        {/* // <div className={styles.glass}>  */}
+            <div className={styles.content}>
+              <div className={styles.contentCol}>
+                <div className={styles.title}>
+                  <h1 className={styles.text}>Hi, I'm</h1>
+                </div>
+                <Logo/>
+                <div className={styles.description}>
+                  <h3 className={styles.subtitle}>I bring your</h3>
+                  <h3 className={styles.emphasis}>ideas</h3>
+                  <h3 className={styles.subtitle}>to</h3>
+                  <h3 className={styles.emphasis}>life</h3>
+                </div>
+              </div>
+            </div>
+        {/* // </div>  */}
+      </main>
+      <div  ref={teste}>
+      <Overview/>
+      </div>
+      <ProjectsNew/>
+      {/* <Testimonials/> */}
+      <div className='relative z-0'>
+        <Contact/>
+        <StarsCanvas/>
+      </div>
+      <footer className={styles.footer}>
+        <div className={styles.info}>
+          <Logo sm/>
+          <div className={styles.descriptionFooter}>
+            Web and Mobile Development
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className={styles.links}>
+          <svg width="0" height="0">
+              <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="100%">
+                  <stop stopColor="#FF3B3B" offset="0%" />
+                  <stop stopColor="#6600CC" offset="100%" />
+              </linearGradient>
+          </svg>
+          <Link href="">
+              <FaTwitter
+                  size='2rem'
+                  style={{fill: "url(#gradient)"}}
+              />
+          </Link>
+          <Link href="">
+              <FaInstagram
+                  size='2rem'
+                  style={{fill: "url(#gradient)"}}
+              />
+          </Link>
+          <Link href="">
+              <FaGithub
+                  size='2rem'
+                  style={{fill: "url(#gradient)"}}
+              />
+          </Link>
+          <Link href="">
+              <FaLinkedin
+                  size='2rem'
+                  style={{fill: "url(#gradient)"}}
+              />
+          </Link>
         </div>
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      </footer> 
+      {/* <Swiper
+            modules={[Scrollbar, EffectCreative]}
+            direction='vertical'
+            spaceBetween={0}
+            slidesPerView={1}
+            // virtual
+            effect={'creative'}
+            speed={600}
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, '-20%', 0],
+              },
+              next: {
+                translate: [0,'100%', 0],
+              },
+            }}
+            className='bg-background'
         >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <SwiperSlide className={styles.main}>
+              <Image src={Blob1} alt='' className={styles.blob1}/>
+              <Image src={Blob2} alt='' className={styles.blob2}/>
+              <Image src={Blob3} alt='' className={styles.blob3}/>
+              <Image src={Blob4} alt='' className={styles.blob4}/>
+              {/* // <div className={styles.glass}>  
+                  <div className={styles.content}>
+                    <div className={styles.contentCol}>
+                      <div className={styles.title}>
+                        <h1 className={styles.text}>Hi, I'm</h1>
+                      </div>
+                      <Logo/>
+                      <div className={styles.description}>
+                        <h3 className={styles.subtitle}>I bring your</h3>
+                        <h3 className={styles.emphasis}>ideas</h3>
+                        <h3 className={styles.subtitle}>to</h3>
+                        <h3 className={styles.emphasis}>life</h3>
+                      </div>
+                    </div>
+                  </div>
+               </div>  
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>Slide 2</h1>
+            <Overview/>
+          </SwiperSlide>
+          <SwiperSlide>
+          <h1>Slide 3</h1>
+            <ProjectsNew/>
+          </SwiperSlide>
+          <SwiperSlide>
+          <h1>Slide 4</h1>
+            <Testimonials/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='relative z-0'>
+              <Contact/>
+              <StarsCanvas/>
+            </div>
+            <footer className={styles.footer}>
+              <div className={styles.info}>
+                <Logo sm/>
+                <div className={styles.descriptionFooter}>
+                  Web and Mobile Development
+                </div>
+              </div>
+              <div className={styles.links}>
+                <svg width="0" height="0">
+                    <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="100%">
+                        <stop stopColor="#FF3B3B" offset="0%" />
+                        <stop stopColor="#6600CC" offset="100%" />
+                    </linearGradient>
+                </svg>
+                <Link href="">
+                    <FaTwitter
+                        size='2rem'
+                        style={{fill: "url(#gradient)"}}
+                    />
+                </Link>
+                <Link href="">
+                    <FaInstagram
+                        size='2rem'
+                        style={{fill: "url(#gradient)"}}
+                    />
+                </Link>
+                <Link href="">
+                    <FaGithub
+                        size='2rem'
+                        style={{fill: "url(#gradient)"}}
+                    />
+                </Link>
+                <Link href="">
+                    <FaLinkedin
+                        size='2rem'
+                        style={{fill: "url(#gradient)"}}
+                    />
+                </Link>
+              </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            </footer>
+          </SwiperSlide>
+        </Swiper> */}
+    </>
   )
 }

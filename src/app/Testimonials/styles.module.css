@@ -1,0 +1,37 @@
+.container{
+    @apply w-screen h-screen bg-background overflow-x-hidden relative;
+}
+.titleContent{
+    @apply py-4 md:py-12 px-10 md:px-20 w-fit;
+}
+
+.title{
+    @apply text-3xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text ; 
+}
+
+.content{
+    @apply w-screen h-3/4 absolute transition-colors duration-700 ;
+}
+
+.comments{
+    @apply flex flex-col overflow-hidden w-[130vw] my-8;
+}
+
+.first, .second{
+    @apply flex flex-row w-full bg-blue-500;
+}
+
+.banner{
+    @apply w-full h-60 bg-[#0F0F18] mt-2 md:mt-12 px-4 py-0 md:p-8 flex flex-col items-center justify-center;
+}
+
+.bannerTitle{
+    @apply text-lg md:text-4xl text-white font-bold;
+}
+
+.bannerDescription{
+    @apply text-xs md:text-lg text-white mt-6 font-normal;
+}
+.bannerLinks{
+    @apply flex flex-row gap-3 mt-8 ml-[-2rem];
+}

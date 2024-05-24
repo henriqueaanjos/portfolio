@@ -1,0 +1,19 @@
+.container{
+    @apply rounded-2xl bg-cards w-fit px-8 py-4 flex flex-col m-4
+}
+.header{
+    @apply flex flex-row justify-between gap-3
+}
+.userInfo{
+    @apply flex flex-col gap-1 mr-3
+}
+.fullName{
+    @apply font-thin text-descriptions text-[0.5rem] md:text-[0.625rem] tracking-[.2em] uppercase 
+}
+.username{
+    @apply text-base md:text-lg text-descriptions
+}
+
+.comment{
+    @apply my-4 text-lg md:text-2xl font-medium text-white
+}

@@ -1,0 +1,7 @@
+.container{
+    @apply bg-white/40 flex flex-row items-center w-12 p-1 rounded-2xl gap-1 cursor-pointer z-[9999]
+}
+
+.dot{
+    @apply w-5 h-5 rounded-full bg-white
+}

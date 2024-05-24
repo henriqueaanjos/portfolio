@@ -1,0 +1,12 @@
+.container{
+    @apply fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-70 z-[1000] flex items-center justify-center p-10
+}
+.content{
+    @apply w-full h-auto bg-cards opacity-100 rounded-lg p-6 pb-14 shadow-2xl
+}
+.header{
+    @apply w-full flex justify-end mb-8;
+}
+.contentDescription{
+    @apply text-white mt-8 flex flex-col gap-2
+}

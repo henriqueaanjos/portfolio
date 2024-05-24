@@ -1,0 +1,9 @@
+.container{
+    @apply w-full p-0;
+}
+.swiper-slide{
+    @apply flex justify-center p-0;
+}
+.slide{
+    @apply w-full flex items-end p-0;
+}

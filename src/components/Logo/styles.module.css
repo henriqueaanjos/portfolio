@@ -1,0 +1,14 @@
+.container{
+    @apply bg-gradient-to-r from-initial to-final rounded-2xl p-0.5 w-fit h-fit
+}
+
+.content{
+    @apply bg-background p-4 rounded-2xl
+}
+
+.title{
+    @apply text-4xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text whitespace-nowrap
+}
+.titleSm{
+    @apply text-sm md:text-lg font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text whitespace-nowrap
+}

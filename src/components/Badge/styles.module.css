@@ -1,0 +1,7 @@
+.container{
+    @apply w-fit h-fit p-3 rounded-full bg-background
+}
+
+.icon{
+    @apply w-8 h-8
+}
