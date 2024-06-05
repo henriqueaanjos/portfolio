@@ -7,7 +7,7 @@
   }
 }
 .box{
-  @apply w-fit h-fit bg-background rounded-2xl p-4;
+  @apply w-fit h-fit bg-background bg-opacity-70 rounded-2xl p-4 z-[99999];
 }
 
 .boxTitle{
@@ -19,7 +19,7 @@
 }
 
 .boxContent{
-  @apply py-8 flex flex-col gap-4 z-[1];
+  @apply py-8 flex flex-col gap-4 z-[9999];
 }
 
 .label{
@@ -31,12 +31,12 @@
 }
 
 .sendButton{
-  @apply bg-gradient-to-r from-initial to-final px-4 py-2 w-full rounded-lg;
+  @apply bg-gradient-to-r from-initial to-final px-4 py-2 w-full rounded-lg hover:cursor-pointer;
 }
 
 .sendButtonTitle{
   @apply text-white;
 }
 .canvas{
-  @apply w-full md:w-6/12 h-full z-[1];
+  @apply w-full md:w-6/12 h-full z-[0];
 }

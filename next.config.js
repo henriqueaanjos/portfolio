@@ -2,6 +2,12 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: [
+      'resend',
+      '@react-email/components',
+      '@react-email/render',
+      '@react-email/tailwind'
+    ]
   },
 }
 // next.config.js

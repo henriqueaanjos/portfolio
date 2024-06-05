@@ -2,13 +2,14 @@
 import Image from 'next/image';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaMobile, FaLaptop } from 'react-icons/fa'
+import tinyColor from 'tinycolor2';
 
 import styles from './styles.module.css';
 
 import Doted from '../../../public/doted.svg';
+import DotedDark from '../../../public/doted_dark.svg';
 
 import Switch from '@/components/Switch';
-import Iphone from '@/components/Iphone';
 import Badge from '@/components/Badge';
 
 import { projects } from '@/utils/projects';
@@ -23,11 +24,13 @@ import './styles.css'
 
 import { motion, useAnimation } from 'framer-motion';
 import Modal, { ModalHandles } from '@/components/Modal';
+import DifficultyRanking from '@/components/DifficultyRanking';
 
 const ProjectsNew = () => {
     const [platform, setPlatform] = useState('mobile');
-    const [project, setProject] = useState(projects[1] as ProjectDTO);
-    const [color, setColor] = useState(projects[1].color);
+    const [project, setProject] = useState(projects[0] as ProjectDTO);
+    // const [color, setColor] = useState(projects[0].color);
+    const [isDarkColor, setIsDarkColor] = useState(false)
     const [nextThumbnail, setNextThumbnail] = useState(projects[1].thumbnail);
     const [isLoadingAnimation, setIsLoadingAnimation] = useState(false);
 
@@ -90,10 +93,25 @@ const ProjectsNew = () => {
         )
     }, [project]);
 
+    function isBackgroundDark(){
+        const hex = project.color.replace('#', '');
+        const r = parseInt(hex.substring(0, 2), 16);
+        const g = parseInt(hex.substring(2, 4), 16);
+        const b = parseInt(hex.substring(4, 6), 16);
+
+        const lum = (r*999 + g* 587 + b* 114) / 1000;
+
+        const isDark = 
+        setIsDarkColor(tinyColor(project.color).isDark());
+    }
+
     useEffect(()=> {
-        setColor(project.color);
         if(projectscontent.current)
             projectscontent.current.style.backgroundColor = project.color;
+        isBackgroundDark();
+        console.log('PROJECT:', project.title);
+        console.log('COLOR:', project.color);
+        console.log('IS DARK COLOR:', isDarkColor);
     }, [project]);
 
 
@@ -104,8 +122,9 @@ const ProjectsNew = () => {
             </div>
             <Modal ref={modalRef} />
             <div className={`${styles.content}`} ref={projectscontent}>
-                <Image src={Doted} alt='' className={styles.doted}/>
+                <Image src={isDarkColor ? Doted : DotedDark} alt='' className={styles.doted}/>
                 <div className={styles.presentation}>
+                    
                     <Swiper 
                         modules={[Keyboard, Pagination, Navigation, Autoplay]}
                         effect={'coverflow'}
@@ -115,6 +134,7 @@ const ProjectsNew = () => {
                         navigation
                         pagination={{
                             clickable: true,
+                            bulletClass: `swiper-pagination-bullet bg-descriptions opacity-100`
                         }}
                         keyboard
                         autoplay={{
@@ -137,20 +157,24 @@ const ProjectsNew = () => {
                                                 animate={infoAnimation}
                                                 initial={{opacity: 1}}
                                             >
-                                                <img src={mov.icon} alt=''/>
-                                                <p className={styles.description}>
+                                                <img src={mov.icon} alt='' className={styles.appLogoLarger}/>
+                                                <p className={isDarkColor ? styles.descriptionLight : styles.descriptionDark} >
                                                     {mov.description}
                                                 </p>
                                             </motion.div>
                                             <img src={mov.icon} alt='' className={styles.appLogo}/>
-                                            <Iphone src={mov.thumbnail} name='' />
+                                            <img src={mov.thumbnail} alt='' className={styles.iphone}/>
                                             <motion.div 
                                                 className={styles.appDetailsTech}
                                                 animate={infoAnimation}
                                                 initial={{opacity: 1}}
                                             >
+                                                <div className={styles.difficulty}>
+                                                    <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Difficulty:</h1>
+                                                    <DifficultyRanking difficulty={project.difficulty}/>
+                                                </div>
                                                 <div className={styles.techs}>
-                                                    <h1 className={styles.techTitle}>Technologies:</h1>
+                                                    <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Technologies:</h1>
                                                     <div className={styles.techBadges}>
                                                         {
                                                             mov.tecnologies.map( item => 
@@ -176,8 +200,12 @@ const ProjectsNew = () => {
                                                 <div className={styles.buttons}>
                                                     {/* <img src="/stamps/apple_stamp.svg" alt="App Store" />
                                                     <img src="/stamps/googlePlay_stamp.svg" alt="Google Play" /> */}
-                                                    <img src="/stamps/github_stamp.svg" alt="Github" />
-                                                    <img src="/stamps/figma_stamp.svg" alt="Figma" />
+                                                    <a href={mov.githubUrl} target='_blank'>
+                                                        <img src="/stamps/github_stamp.svg" alt="Github" />
+                                                    </a>
+                                                    <a href={mov.figmaUrl}>
+                                                        <img src="/stamps/figma_stamp.svg" alt="Figma" />
+                                                    </a>
                                                 </div>
                                             </motion.div>
                                         </div>

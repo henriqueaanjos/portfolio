@@ -21,6 +21,9 @@
     @apply h-full w-screen flex;
 }
 
+.difficulty{
+    @apply w-full flex flex-row items-center
+}
 .selector{
     @apply w-full flex items-center justify-end py-4 px-16 gap-4 
 }
@@ -35,28 +38,40 @@
     @apply w-full h-full flex items-center justify-evenly 
 }
 .appDetails{
-    @apply w-80 h-auto hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20 
+    @apply w-80 hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20 
 }
 .appDetailsTech{
-    @apply w-80 h-auto flex flex-col items-start justify-between gap-8 mx-20 
+    @apply w-80 h-auto flex flex-col items-start justify-between gap-40 mx-20 
 }
 .appLogo{
     @apply lg:hidden mb-[-3rem] scale-75;
 }
-.description{
+.appLogoLarger{
+    @apply h-14 w-auto  p-0 relative
+}
+.iphone{
+    @apply md:w-[25rem] w-[15rem];
+}
+.descriptionLight{
     @apply text-white w-full h-auto ml-4
+}
+.descriptionDark{
+    @apply text-black w-full h-auto ml-4
 }
 
 .techs{
     @apply w-80 h-auto hidden lg:inline
 }
 
-.techTitle{
-    @apply font-medium text-lg text-white mb-3
+.techTitleLight{
+    @apply font-medium text-lg text-white
+}
+.techTitleDark{
+    @apply font-medium text-lg text-black
 }
 
 .techBadges{
-    @apply flex flex-wrap gap-2
+    @apply flex flex-wrap gap-4 mt-6
 }
 
 .buttonsHidden{
@@ -84,12 +99,12 @@
 }
 
 .swiper-pagination{
-    
+    background-color: red;
 }
 .swiper-pagination-bullet {
     height: 2px;
     width: 2px;
-    background-color: white;
+    background-color: purple;
   }
   
 .swiper-pagination-bullet .swiper-custom-bullet-active {
@@ -103,4 +118,8 @@
 
 .slide{
     @apply w-full h-fit flex flex-col lg:flex-row items-center justify-evenly p-0;
+}
+
+.customPagination{
+
 }

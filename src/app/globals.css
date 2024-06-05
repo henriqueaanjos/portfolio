@@ -8,3 +8,16 @@
     @apply bg-gradient-to-r from-initial to-final
   }
 }
+
+body::-webkit-scrollbar{
+  @apply w-3 
+
+}
+
+body::-webkit-scrollbar-track{
+  @apply bg-background
+}
+
+body::-webkit-scrollbar-thumb{
+  @apply bg-descriptions rounded-lg border-x-2 border-background bg-opacity-10;
+}

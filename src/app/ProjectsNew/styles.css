@@ -1,17 +1,9 @@
-
-.swiper-pagination-bullet {
-    @apply bg-background;
-  }
-.swiper-pagination-wrapper{
-  @apply bg-blue-500;
-}
-  
 .swiper-pagination-bullet-active {
-    @apply bg-gradient-to-r from-initial to-final;
+  @apply bg-gradient-to-r from-initial to-final;
 }
 .swiper-button-next {
-  @apply text-transparent bg-gradient-to-l from-initial to-final bg-clip-text bg-cards;
+  @apply text-transparent bg-descriptions bg-clip-text mr-4;
 }
 .swiper-button-prev{
-  @apply text-transparent bg-gradient-to-r from-initial to-final bg-clip-text;
+  @apply text-transparent bg-descriptions bg-clip-text ml-4;
 }

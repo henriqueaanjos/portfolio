@@ -1,0 +1,6 @@
+.container{
+    @apply flex flex-row gap-2;
+}
+.star{
+    @apply  bg-descriptions  text-transparent bg-clip-text ml-4;
+}

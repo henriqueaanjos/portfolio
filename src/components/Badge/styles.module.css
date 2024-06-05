@@ -1,5 +1,5 @@
 .container{
-    @apply w-fit h-fit p-3 rounded-full bg-background
+    @apply w-fit h-fit p-3 rounded-full bg-background border-2
 }
 
 .icon{

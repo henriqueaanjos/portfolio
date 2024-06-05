@@ -9,5 +9,8 @@ export interface ProjectDTO{
         id: number,
         name: string,
         icon: string
-    }[]
+    }[],
+    difficulty: number,
+    githubUrl: string,
+    figmaUrl: string
 }
