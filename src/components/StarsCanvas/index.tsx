@@ -9,12 +9,14 @@ import * as random from 'maath/random';
 import styles from './styles.module.css';
 
 const Stars = ({...props}) => {
-    const ref = useRef();
+    const ref = useRef<THREE.Points>(null);
 
     const sphere = random.inSphere(new Float32Array(5000), {radius: 1.2})
     useFrame((state, delta) => {
-        ref.current.rotation.x -= delta/15;
-        ref.current.rotation.y -= delta/10;
+        if(ref.current){
+            ref.current.rotation.x -= delta/15;
+            ref.current.rotation.y -= delta/10;
+        }
     })
 
     return(

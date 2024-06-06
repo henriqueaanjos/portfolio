@@ -48,7 +48,7 @@ const Modal: React.ForwardRefRenderFunction<ModalHandles> =  (props, ref) => {
         }
     })
 
-    useEffect(() => {
+    function ListenerMouse(){
         // Adicionar um ouvinte de evento para verificar os cliques fora do modal
         document.addEventListener('mousedown', handleClickOutside);
     
@@ -56,7 +56,11 @@ const Modal: React.ForwardRefRenderFunction<ModalHandles> =  (props, ref) => {
         return () => {
           document.removeEventListener('mousedown', handleClickOutside);
         };
-      }, []);
+    }
+
+    useEffect(() => {
+        ListenerMouse();
+      }, [ListenerMouse]);
 
     if(!isVisible){
         return null;

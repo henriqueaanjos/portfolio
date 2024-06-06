@@ -6,8 +6,8 @@ import tinyColor from 'tinycolor2';
 
 import styles from './styles.module.css';
 
-import Doted from '../../../public/doted.svg';
-import DotedDark from '../../../public/doted_dark.svg';
+import Doted from '../../../../public/doted.svg';
+import DotedDark from '../../../../public/doted_dark.svg';
 
 import Switch from '@/components/Switch';
 import Badge from '@/components/Badge';
@@ -84,7 +84,9 @@ const ProjectsNew = () => {
         modalRef.current?.handleChangeContent(
             <>
             {project.tecnologies.map( tech => 
-                <div className={styles.techModalContent}>
+                <div className={styles.techModalContent}
+                    key={tech.id}
+                >
                     <Badge src={tech.icon} alt={tech.name} key={tech.id}/>
                     <h1 className={styles.techModalName}>{tech.name}</h1>
                 </div>

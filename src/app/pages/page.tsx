@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 import styles from './page.module.css'
 
-import Blob1 from '../../public/Blob1.svg';
-import Blob2 from '../../public/Blob2.svg';
-import Blob3 from '../../public/Blob3.svg';
-import Blob4 from '../../public/Blob4.svg';
+import Blob1 from '../../../public/Blob1.svg';
+import Blob2 from '../../../public/Blob2.svg';
+import Blob3 from '../../../public/Blob3.svg';
+import Blob4 from '../../../public/Blob4.svg';
 import Logo from '@/components/Logo';
-import ProjectsNew from './ProjectsNew/page';
+import ProjectsNew from './Projects/page';
 import Testimonials from './Testimonials/page';
 import Contact from './Contact/page';
 import Link from 'next/link';
@@ -41,7 +41,7 @@ export default function Home() {
             <div className={styles.content}>
               <div className={styles.contentCol}>
                 <div className={styles.title}>
-                  <h1 className={styles.text}>Hi, I'm</h1>
+                  <h1 className={styles.text}>Hi, I&apos;m</h1>
                 </div>
                 <Logo/>
                 <div className={styles.description}>

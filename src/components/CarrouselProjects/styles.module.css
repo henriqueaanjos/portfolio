@@ -1,9 +1,0 @@
-.container{
-    @apply w-screen  p-0 bg-red-500 flex items-center justify-between;
-}
-.swiper-slide{
-    @apply flex justify-center p-0 bg-green-500;
-}
-.slide{
-    @apply w-screen flex items-center justify-center p-0;
-}

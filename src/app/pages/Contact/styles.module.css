@@ -1,42 +1,42 @@
-.container{
-  @apply w-screen h-full bg-black overflow-x-hidden flex flex-col-reverse md:flex-row justify-evenly items-center;  
+.container {
+  @apply w-screen h-full bg-black overflow-x-hidden flex flex-col-reverse md:flex-row justify-evenly items-center;
 }
 @media (min-width: 768px) {
-  .container{
+  .container {
     height: calc(100vh - 7rem);
   }
 }
-.box{
+.box {
   @apply w-fit h-fit bg-background bg-opacity-70 rounded-2xl p-4 z-[99999];
 }
 
-.boxTitle{
+.boxTitle {
   @apply text-base md:text-lg text-white uppercase font-bold;
 }
 
-.boxTitleEmphasis{
-  @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text ;
+.boxTitleEmphasis {
+  @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text;
 }
 
-.boxContent{
+.boxContent {
   @apply py-8 flex flex-col gap-4 z-[9999];
 }
 
-.label{
+.label {
   @apply text-white uppercase tracking-[0.2em] font-bold text-xs mb-2;
 }
 
-.input{
+.input {
   @apply w-[18rem] md:w-96 bg-cards rounded-lg p-2 text-descriptions text-sm font-bold;
 }
 
-.sendButton{
+.sendButton {
   @apply bg-gradient-to-r from-initial to-final px-4 py-2 w-full rounded-lg hover:cursor-pointer;
 }
 
-.sendButtonTitle{
+.sendButtonTitle {
   @apply text-white;
 }
-.canvas{
+.canvas {
   @apply w-full md:w-6/12 h-full z-[0];
 }

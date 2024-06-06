@@ -30,9 +30,6 @@ const Contact = () => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.canvas}>
-                <EarthCanvas/>
-            </div>
             <div className={styles.box}>
                 <div className={styles.boxTitle}>
                     Get in Touch
@@ -56,7 +53,9 @@ const Contact = () => {
                     </button>
                 </div>
             </div>
-            
+            <div className={styles.canvas}>
+                <EarthCanvas/>
+            </div>
             
             {/* <Image src={worldSVG} alt="World"/> */}
         </div>

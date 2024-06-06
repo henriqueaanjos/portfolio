@@ -10,7 +10,8 @@ import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
 
 
-import Me from '../../../public/me.png';
+import Me from '../../../../public/me-2.jpg';
+import Image from 'next/image';
 
 
 const Overview = () => {
@@ -100,7 +101,7 @@ const Overview = () => {
                     </p>
                 </div>
                 <div className={styles.frame}>
-                 <img src='me-2.jpg' alt='Me' className={styles.photo}/>
+                 <Image src={Me} alt='Me' width={500} height={500}/>
                     </div>
             </motion.div>
             <motion.div 
