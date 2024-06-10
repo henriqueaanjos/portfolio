@@ -1,4 +1,4 @@
-<svg width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="900" viewBox="0 0 475 475" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#paint0_linear_628_56)"> 
     <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
         values="M430.5,298.5Q401,347,373,402.5Q345,458,281.5,466Q218,474,168.5,437.5Q119,401,100,350.5Q81,300,70.5,247Q60,194,86.5,143Q113,92,166.5,65Q220,38,268.5,70.5Q317,103,355,130.5Q393,158,426.5,204Q460,250,430.5,298.5Z;
@@ -12,8 +12,8 @@
 </path>
 <defs>
 <linearGradient id="paint0_linear_628_56" x1="861.172" y1="149.579" x2="-18.3609" y2="149.579" gradientUnits="userSpaceOnUse">
-<stop offset="0.31" stop-color="#E6006E"/>
-            <stop offset="0.5" stop-color="#E6006E"/>
+        <stop offset="0.31" stop-color="#E6006E"/>
+            <stop offset="0.69" stop-color="#ED5A4B"/>
             <stop offset="1" stop-color="#F4B628"/>
 </linearGradient>
 </defs>

@@ -15,7 +15,7 @@
 }
 
 .boxTitleEmphasis {
-  @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text;
+  @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial  via-mid  to-final bg-clip-text;
 }
 
 .boxContent {
@@ -27,16 +27,19 @@
 }
 
 .input {
-  @apply w-[18rem] md:w-96 bg-cards rounded-lg p-2 text-descriptions text-sm font-bold;
+  @apply w-[18rem] md:w-96 bg-cards rounded-lg p-2 text-descriptions text-sm font-medium;
 }
 
 .sendButton {
-  @apply bg-gradient-to-r from-initial to-final px-4 py-2 w-full rounded-lg hover:cursor-pointer;
+  @apply bg-gradient-to-r from-initial  via-mid  to-final  px-4 py-2 w-full rounded-lg hover:cursor-pointer hover:brightness-125;
 }
 
+.sendButton:active{
+  @apply opacity-50
+}
 .sendButtonTitle {
-  @apply text-white;
+  @apply text-white font-bold;
 }
 .canvas {
-  @apply w-full md:w-6/12 h-full z-[0];
+  @apply w-full md:w-6/12 h-full z-[2];
 }

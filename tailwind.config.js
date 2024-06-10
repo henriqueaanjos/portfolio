@@ -16,10 +16,16 @@ module.exports = {
         'mid': '#ED5A4B',
         'final': '#F4B628',
         'cards': '#28293D',
+        'quote': '#0F0F18',
         'descriptions': '#C7C9D9'
       },
       fontFamily: {
         sans: ['var(--font-sf-pro)']
+      },
+      gradientColorStops:{
+        31: '10%',
+        69: '69%',
+        100: '100%'
       }
     },
   },

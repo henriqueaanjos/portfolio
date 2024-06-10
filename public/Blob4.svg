@@ -1,4 +1,4 @@
-<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="500" viewBox="0 0 475 475" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#paint0_linear_126_177)">
 <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
         values="M399.6048,282.76501Q385.01528,315.53002,369.61599,348.28384Q354.2167,381.03766,320.53002,396.18313Q286.84334,411.3286,249.04476,415.6048Q211.24618,419.881,175.57833,404.00764Q139.91048,388.13428,93.15311,368.21261Q46.39574,348.29094,39.51883,299.14547Q32.64192,250,63.00355,212.3357Q93.36518,174.6714,118.14902,145.29094Q142.93286,115.91048,170.8881,70.08597Q198.84334,24.26146,248.43286,31.5524Q298.02238,38.84334,322.23144,84.27975Q346.4405,129.71616,374.33979,153.03712Q402.23908,176.35808,408.2167,213.17904Q414.19432,250,399.6048,282.76501Z;
@@ -12,7 +12,7 @@
 <defs>
 <linearGradient id="paint0_linear_126_177" x1="437.338" y1="251.972" x2="47.5446" y2="251.972" gradientUnits="userSpaceOnUse">
 <stop offset="0.31" stop-color="#E6006E"/>
-            <stop offset="0.5" stop-color="#E6006E"/>
+            <stop offset="0.69" stop-color="#ED5A4B"/>
             <stop offset="1" stop-color="#F4B628"/>
 </linearGradient>
 </defs>

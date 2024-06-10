@@ -10,6 +10,7 @@
     "email": "email dev --dir src/components/EmailTemplate"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
     "@react-email/components": "^0.0.19",
     "@react-three/drei": "^9.80.3",
     "@react-three/fiber": "^8.13.7",
@@ -29,6 +30,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-email": "^2.1.4",
+    "react-hook-form": "^7.51.5",
     "react-icons": "^4.8.0",
     "react-tilt": "^1.0.2",
     "remotion": "^4.0.86",
@@ -37,7 +39,8 @@
     "swiper": "^10.1.0",
     "three": "^0.155.0",
     "tinycolor2": "^1.6.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/tinycolor2": "^1.4.6",

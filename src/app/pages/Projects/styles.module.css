@@ -1,125 +1,73 @@
-.container{
-    @apply w-screen h-screen bg-background overflow-x-hidden relative
+.container {
+  @apply w-screen bg-background overflow-x-hidden relative pb-8;
 }
-.titleContent{
-    @apply py-4 md:py-12 px-10 md:px-20 w-fit;
+.titleContainer {
+  @apply w-full py-4 px-10 md:px-20 md:py-12;
 }
-
-.title{
-    @apply text-3xl font-bold text-transparent bg-gradient-to-r from-initial to-final bg-clip-text  
+.content {
+  @apply w-full transition-colors duration-700 mb-10;
 }
-
-.content{
-    @apply w-screen h-[90%] lg:h-3/4  absolute transition-colors duration-700
+.doted {
+  @apply absolute h-full w-full;
 }
-
-.doted{
-    @apply w-screen h-full absolute top-0
+.slideLight{
+    @apply  w-full flex flex-col items-center justify-evenly md:flex-row py-10 bg-[url('../../../../public/doted.svg')] bg-cover;
 }
-
-.presentation{
-    @apply h-full w-screen flex;
+.slideDark{
+    @apply w-full flex flex-col items-center justify-evenly md:flex-row py-10  bg-[url('../../../../public/doted_dark.svg')] bg-cover;
 }
-
-.difficulty{
-    @apply w-full flex flex-row items-center
+.appDetails {
+  @apply w-80 hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20;
 }
-.selector{
-    @apply w-full flex items-center justify-end py-4 px-16 gap-4 
+.appLogoLarger {
+  @apply h-14 w-auto p-0 relative;
 }
-
-.presentationContent{
-    @apply w-[115vw] h-full flex flex-row items-end justify-between gap-8 z-40 
+.descriptionLight {
+  @apply text-white w-full h-auto ml-4;
 }
-/* .iphoneMd{
-    @apply scale-[85%]
-} */
-.appInfo{
-    @apply w-full h-full flex items-center justify-evenly 
+.descriptionDark {
+  @apply text-black w-full h-auto ml-4;
 }
-.appDetails{
-    @apply w-80 hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20 
+.appLogo {
+  @apply h-12 w-auto mb-[3rem] lg:hidden;
 }
-.appDetailsTech{
-    @apply w-80 h-auto flex flex-col items-start justify-between gap-40 mx-20 
+.iphone {
+  @apply w-[15rem] md:w-[25rem];
 }
-.appLogo{
-    @apply lg:hidden mb-[-3rem] scale-75;
+.appDetailsTech {
+  @apply w-80 h-auto flex flex-col items-start justify-between gap-[3rem] mx-20 md:gap-40;
 }
-.appLogoLarger{
-    @apply h-14 w-auto  p-0 relative
+.difficulty {
+  @apply w-full flex flex-row items-center justify-center md:justify-start;
 }
-.iphone{
-    @apply md:w-[25rem] w-[15rem];
+.techTitleLight {
+  @apply font-medium text-lg text-white;
 }
-.descriptionLight{
-    @apply text-white w-full h-auto ml-4
+.techTitleDark {
+  @apply font-medium text-lg text-black;
 }
-.descriptionDark{
-    @apply text-black w-full h-auto ml-4
+.techs {
+  @apply w-80 h-auto hidden lg:inline;
 }
-
-.techs{
-    @apply w-80 h-auto hidden lg:inline
+.techBadges {
+  @apply flex flex-wrap gap-4 mt-6;
 }
-
-.techTitleLight{
-    @apply font-medium text-lg text-white
+.buttonsHidden {
+  @apply w-full mt-[-2rem] flex items-center justify-evenly lg:hidden;
 }
-.techTitleDark{
-    @apply font-medium text-lg text-black
+.buttonHidden {
+  @apply w-fit px-3 py-2 bg-cards rounded-2xl text-white;
+}
+.buttons {
+  @apply w-80 h-auto flex items-center justify-center flex-wrap gap-x-4;
+}
+.techModalContent {
+  @apply flex items-center justify-start gap-2;
+}
+.techModalName {
+  @apply text-white text-lg;
 }
 
-.techBadges{
-    @apply flex flex-wrap gap-4 mt-6
-}
-
-.buttonsHidden{
-    @apply w-full mt-[-2rem] flex items-center justify-evenly lg:hidden
-}
-
-.buttonHidden{
-    @apply w-fit px-3 py-2 bg-cards rounded-2xl text-white
-}
-
-.buttons{
-    @apply w-80 h-auto flex items-center flex-wrap gap-x-4
-}
-
-.techModalContent{
-    @apply flex items-center justify-start gap-2
-}
-
-.techModalName{
-    @apply text-white text-lg
-}
-
-.swiperContainer {
-    @apply w-screen bg-green-600;
-}
-
-.swiper-pagination{
-    background-color: red;
-}
-.swiper-pagination-bullet {
-    height: 2px;
-    width: 2px;
-    background-color: purple;
-  }
-  
-.swiper-pagination-bullet .swiper-custom-bullet-active {
-    height: 2px;
-    width: 2px;
-    background-color: orange;
-  }
-.swiperSlide{
-    @apply flex items-center justify-center ;
-}
-
-.slide{
-    @apply w-full h-fit flex flex-col lg:flex-row items-center justify-evenly p-0;
-}
-
-.customPagination{
-
+.images{
+  @apply w-full
 }

@@ -5,7 +5,7 @@
 
 @layer utilities{
   .bg-gradient{
-    @apply bg-gradient-to-r from-initial to-final
+    @apply bg-gradient-to-r from-initial from-31% via-mid via-69% to-final
   }
 }
 

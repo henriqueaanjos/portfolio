@@ -1,0 +1,7 @@
+.container{
+    @apply w-fit;
+}
+
+.text{
+    @apply text-3xl font-bold text-transparent bg-gradient-to-r from-initial via-mid to-final bg-clip-text 
+}

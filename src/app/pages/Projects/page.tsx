@@ -25,6 +25,7 @@ import './styles.css'
 import { motion, useAnimation } from 'framer-motion';
 import Modal, { ModalHandles } from '@/components/Modal';
 import DifficultyRanking from '@/components/DifficultyRanking';
+import { GradientText } from '@/components/GradientText';
 
 const ProjectsNew = () => {
     const [platform, setPlatform] = useState('mobile');
@@ -66,7 +67,7 @@ const ProjectsNew = () => {
         modalRef.current?.handleOpenModal();
         modalRef.current?.handleChangeTitle(
             <>
-                <img src={project.icon} alt=''/>
+                <Image src={project.icon} alt='' className={styles.appLogo}/>
             </>
         );
         modalRef.current?.handleChangeContent(
@@ -78,7 +79,7 @@ const ProjectsNew = () => {
         modalRef.current?.handleOpenModal();
         modalRef.current?.handleChangeTitle(
             <>
-                <img src={project.icon} alt=''/>
+                <Image src={project.icon} alt='' className={styles.appLogo}/>
             </>
         );
         modalRef.current?.handleChangeContent(
@@ -111,112 +112,104 @@ const ProjectsNew = () => {
         if(projectscontent.current)
             projectscontent.current.style.backgroundColor = project.color;
         isBackgroundDark();
-        console.log('PROJECT:', project.title);
-        console.log('COLOR:', project.color);
-        console.log('IS DARK COLOR:', isDarkColor);
     }, [project]);
 
 
     return(
         <div className={styles.container} ref={projectsMain}>
-            <div className={styles.titleContent}>
-                <h1 className={styles.title}>Projects</h1>
+            <div className={styles.titleContainer}>
+                <GradientText text="Projects"/>
             </div>
             <Modal ref={modalRef} />
-            <div className={`${styles.content}`} ref={projectscontent}>
-                <Image src={isDarkColor ? Doted : DotedDark} alt='' className={styles.doted}/>
-                <div className={styles.presentation}>
-                    
-                    <Swiper 
-                        modules={[Keyboard, Pagination, Navigation, Autoplay]}
-                        effect={'coverflow'}
-                        spaceBetween={0}
-                        slidesPerView={1}
-                        loop
-                        navigation
-                        pagination={{
-                            clickable: true,
-                            bulletClass: `swiper-pagination-bullet bg-descriptions opacity-100`
-                        }}
-                        keyboard
-                        autoplay={{
-                            delay: 5000,
-                            disableOnInteraction: true,
-                            waitForTransition: true,
-                        }}
-                        initialSlide={0}
-                        speed={500}
-                        onSwiper={e => handleChangeFocus(e.realIndex)}
-                        onActiveIndexChange={ e => handleChangeFocus(e.realIndex)}
-                    >
-                        {
-                            projects.map((mov, i) => {
-                                return(
-                                    <SwiperSlide className={styles.swiperSlide} key={i}>
-                                        <div className={styles.slide}>
-                                            <motion.div 
-                                                className={styles.appDetails}
-                                                animate={infoAnimation}
-                                                initial={{opacity: 1}}
-                                            >
-                                                <img src={mov.icon} alt='' className={styles.appLogoLarger}/>
-                                                <p className={isDarkColor ? styles.descriptionLight : styles.descriptionDark} >
-                                                    {mov.description}
-                                                </p>
-                                            </motion.div>
-                                            <img src={mov.icon} alt='' className={styles.appLogo}/>
-                                            <img src={mov.thumbnail} alt='' className={styles.iphone}/>
-                                            <motion.div 
-                                                className={styles.appDetailsTech}
-                                                animate={infoAnimation}
-                                                initial={{opacity: 1}}
-                                            >
-                                                <div className={styles.difficulty}>
-                                                    <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Difficulty:</h1>
-                                                    <DifficultyRanking difficulty={project.difficulty}/>
-                                                </div>
-                                                <div className={styles.techs}>
-                                                    <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Technologies:</h1>
-                                                    <div className={styles.techBadges}>
-                                                        {
-                                                            mov.tecnologies.map( item => 
-                                                                <Badge src={item.icon} alt={item.name} key={item.id}/>
-                                                            )
-                                                        }
-                                                    </div>
-                                                </div>
-                                                <div className={styles.buttonsHidden}>
-                                                    <button 
-                                                        className={styles.buttonHidden}
-                                                        onClick={handleModalDescriptionOpen}
-                                                    >
-                                                        View Description
-                                                    </button>
-                                                    <button 
-                                                        className={styles.buttonHidden}
-                                                        onClick={handleModalTechologiesOpen}
-                                                    >
-                                                        View Tecnologies
-                                                    </button>
-                                                </div>
-                                                <div className={styles.buttons}>
-                                                    {/* <img src="/stamps/apple_stamp.svg" alt="App Store" />
-                                                    <img src="/stamps/googlePlay_stamp.svg" alt="Google Play" /> */}
-                                                    <a href={mov.githubUrl} target='_blank'>
-                                                        <img src="/stamps/github_stamp.svg" alt="Github" />
-                                                    </a>
-                                                    <a href={mov.figmaUrl}>
-                                                        <img src="/stamps/figma_stamp.svg" alt="Figma" />
-                                                    </a>
-                                                </div>
-                                            </motion.div>
+            <div className={styles.content} ref={projectscontent}>
+                {/* <Image src={isDarkColor ? Doted : DotedDark} alt='' className={styles.doted}/> */}
+                <Swiper 
+                    modules={[Keyboard, Pagination, Navigation, Autoplay]}
+                    effect={'coverflow'}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop
+                    navigation
+                    pagination={{
+                        clickable: true,
+                        bulletClass: `swiper-pagination-bullet bg-descriptions opacity-100`
+                    }}
+                    keyboard
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: true,
+                        waitForTransition: true,
+                    }}
+                    initialSlide={0}
+                    speed={500}
+                    onSwiper={e => handleChangeFocus(e.realIndex)}
+                    onActiveIndexChange={ e => handleChangeFocus(e.realIndex)}
+                >
+                    {
+                        projects.map((mov, i) => {
+                            return(
+                                <SwiperSlide className={isDarkColor ? styles.slideLight : styles.slideDark} key={i}>
+                                    <motion.div 
+                                        className={styles.appDetails}
+                                        animate={infoAnimation}
+                                        initial={{opacity: 1}}
+                                    >
+                                        <img src={mov.icon} alt='' className={styles.appLogoLarger}/>
+                                        <p className={isDarkColor ? styles.descriptionLight : styles.descriptionDark} >
+                                            {mov.description}
+                                        </p>
+                                    </motion.div>
+                                    <img src={mov.icon} alt='' className={styles.appLogo}/>
+                                    <Image src={mov.thumbnail} alt='' className={styles.iphone} width={1707}height={3054}/>
+                                    <motion.div 
+                                        className={styles.appDetailsTech}
+                                        animate={infoAnimation}
+                                        initial={{opacity: 1}}
+                                    >
+                                        <div className={styles.difficulty}>
+                                            <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Difficulty:</h1>
+                                            <DifficultyRanking difficulty={project.difficulty}/>
                                         </div>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                    </Swiper>
-                </div>
+                                        <div className={styles.techs}>
+                                            <h1 className={isDarkColor ? styles.techTitleLight : styles.techTitleDark}>Technologies:</h1>
+                                            <div className={styles.techBadges}>
+                                                {
+                                                    mov.tecnologies.map( item => 
+                                                        <Badge src={item.icon} alt={item.name} key={item.id}/>
+                                                    )
+                                                }
+                                            </div>
+                                        </div>
+                                        <div className={styles.buttonsHidden}>
+                                            <button 
+                                                className={styles.buttonHidden}
+                                                onClick={handleModalDescriptionOpen}
+                                            >
+                                                View Description
+                                            </button>
+                                            <button 
+                                                className={styles.buttonHidden}
+                                                onClick={handleModalTechologiesOpen}
+                                            >
+                                                View Tecnologies
+                                            </button>
+                                        </div>
+                                        <div className={styles.buttons}>
+                                            {/* <img src="/stamps/apple_stamp.svg" alt="App Store" />
+                                            <img src="/stamps/googlePlay_stamp.svg" alt="Google Play" /> */}
+                                            <a href={mov.githubUrl} target='_blank'>
+                                                <Image src="/stamps/github_stamp.svg" alt="Github" className={styles.image} width={80} height={39}/>
+                                            </a>
+                                            <a href={mov.figmaUrl}>
+                                                <Image src="/stamps/figma_stamp.svg" alt="Figma" className={styles.image} width={70} height={39}/>
+                                            </a>
+                                        </div>
+                                    </motion.div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
             </div>
         </div>
     );
