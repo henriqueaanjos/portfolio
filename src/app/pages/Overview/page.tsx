@@ -25,7 +25,7 @@ const Overview = () => {
                         </h3>
                     </div>
                     <p className={styles.infoDescription}>
-                        Meu nome é Henrique Anjos, tenho 25 anos e me considero um entusiasta do desenvolvimento mobile, especialmente com React Native. Atualmente, estou concluindo a jornada de Ciências da Computação na UFMS, além de ter uma formação em Informática pelo IFMS.
+                        Meu nome é Henrique Anjos, tenho 25 anos e sou um entusiasta do desenvolvimento mobile, especialmente com React Native. Graduado em Ciências da Computação pela UFMS, além de ter uma formação em Informática pelo IFMS.
                         <br/><br/>
                         Trabalho nesse mundo do desenvolvimento desde 2019, mas minha paixão pela programação começou há 10 anos - sim, é muita história pra contar!
                         <br/><br/>

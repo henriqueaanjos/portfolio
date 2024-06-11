@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev --dir src/components/EmailTemplate"
+    "email": "email dev --dir src/components/EmailTemplate/"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",

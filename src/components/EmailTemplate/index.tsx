@@ -32,7 +32,8 @@ import {
           <Container style={container}>
             <Section style={coverSection}>
               <Section style={upperSection}>
-                <Heading style={h1}>{email}</Heading>
+               <Heading style={h1}>{name}</Heading>
+                <Heading style={codeText}>{email}</Heading>
                 <Text style={mainText}>
                   {message}
                 </Text>

@@ -36,7 +36,7 @@ const SFPro = localFont({
 
 export const metadata = {
   title: 'Henrique Anjos',
-  description: 'Portfolio created by Henrique Anjos',
+  description: 'Portfolio created by Henrique Anjos'
 }
 
 export default function RootLayout({
@@ -46,8 +46,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${SFPro.variable} font-sans overflow-x-hidden`}>
-      <meta name="theme-color" content="#1C1C28"/>
-      <meta name="apple-mobile-web-app-status-bar-style" content="#1C1C28"/>
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>"/>
+        <link rel="apple-touch-icon" href="/apple-icon?<generated>" type="image/<generated>" sizes="<generated>"/>
+        <meta name="theme-color" content="#1C1C28"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#1C1C28"/>
+      </head>
       <body >{children}</body>
     </html>
   )

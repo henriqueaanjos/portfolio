@@ -1,5 +1,5 @@
 .container {
-  @apply w-screen h-full bg-black overflow-x-hidden flex flex-col-reverse md:flex-row justify-evenly items-center;
+  @apply w-screen bg-black overflow-x-hidden flex flex-col-reverse md:flex-row justify-evenly items-center;
 }
 @media (min-width: 768px) {
   .container {
@@ -16,6 +16,12 @@
 
 .boxTitleEmphasis {
   @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial  via-mid  to-final bg-clip-text;
+}
+.boxSuccessfullyTitleEmphasis {
+  @apply text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-initial  via-mid  to-final bg-clip-text mt-[-2rem];
+}
+.boxSubtitle{
+  @apply w-[18rem] md:w-96 text-base text-descriptions font-thin mb-10 mt-4;
 }
 
 .boxContent {

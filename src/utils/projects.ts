@@ -41,7 +41,7 @@ export const projects = [
         ],
         difficulty: 2,
         githubUrl: 'https://github.com/henriqueaanjos/goFinances',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/zVLN3ybC4GoVXBIByubD7A/GoFinances-Ignite-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 2,
@@ -84,7 +84,7 @@ export const projects = [
         ],
         difficulty: 3,
         githubUrl: 'https://github.com/henriqueaanjos/rentx',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/e8Kkb8QImQV0Z0F8WXkgju/RentX-Ignite---Offline-First?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 3,
@@ -127,7 +127,7 @@ export const projects = [
         ],
         difficulty: 4,
         githubUrl: 'https://github.com/henriqueaanjos/proffy',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/yd3jWIenoW3tTTdoTp5gHh/Proffy-Mobile-2.0-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 4,
@@ -175,7 +175,7 @@ export const projects = [
         ],
         difficulty: 4,
         githubUrl: 'https://github.com/henriqueaanjos/marketspace',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/1WL7CwU7fdc7ZqzFOACErU/Marketspace-%E2%80%A2-Desafio-React-Native-(Copy)-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 5,
@@ -223,7 +223,7 @@ export const projects = [
         ],
         difficulty: 3,
         githubUrl: 'https://github.com/henriqueaanjos/igniteGym',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/7h7yrDlFggMfhmK0EnEJ9n/Ignite-Gym-(Community)-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 6,
@@ -256,7 +256,7 @@ export const projects = [
         ],
         difficulty: 1,
         githubUrl: 'https://github.com/henriqueaanjos/stream.Data-ignite',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/neELzx5ARh1XMOoDAFzOYv/stream.data-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 7,
@@ -284,7 +284,7 @@ export const projects = [
         ],
         difficulty: 1,
         githubUrl: 'https://github.com/henriqueaanjos/toDoList-rocketseat',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/2dSEubG4BkV0UocpseXEVX/ToDo-List-%E2%80%A2-Desafio-React-Native-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
         id: 8,
@@ -327,7 +327,7 @@ export const projects = [
         ],
         difficulty: 3,
         githubUrl: 'https://github.com/henriqueaanjos/dailyDiet-rocketseat',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/6Nusl6Z6GEkQfiJZnzObwN/Daily-Diet-%E2%80%A2-Desafio-React-Native-(Community)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     
     {
@@ -366,7 +366,7 @@ export const projects = [
         ],
         difficulty: 2,
         githubUrl: 'https://github.com/henriqueaanjos/igniteTeams',
-        figmaUrl: ''
+        figmaUrl: 'https://www.figma.com/design/5MbXGROldCnTXfYf9kuC4J/Ignite-Teams-(Community)-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     
 

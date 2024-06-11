@@ -52,11 +52,11 @@
 }
 
 .footer{
-  @apply w-screen h-fit md:h-28 bg-black flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-0 justify-between p-7 z-[10];
+  @apply w-screen h-fit md:h-28 bg-black flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-0 justify-between p-7;
 }
 
 .info{
-  @apply flex flex-row gap-3 items-center justify-center;
+  @apply flex flex-row gap-3 items-center justify-center z-50;
 }
 
 .descriptionFooter{
@@ -64,6 +64,6 @@
 }
 
 .links{
-  @apply flex flex-row gap-3 hover:cursor-pointer;
+  @apply flex flex-row gap-3 hover:cursor-pointer z-50;
 }
 

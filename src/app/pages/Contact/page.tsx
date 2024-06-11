@@ -32,7 +32,7 @@ const contactSchema = yup.object({
 });
 
 const Contact = () => {
-    const [messageSended, setMessageSended] = useState(false);
+    const [messageSended, setMessageSended] = useState(true);
 
     const {control, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(contactSchema)
@@ -51,15 +51,27 @@ const Contact = () => {
         })
         setMessageSended(true);
     }
+    function handleSendOtherMessage(){
+        setMessageSended(false);
+    }
 
     return(
         <div className={styles.container}>
             {messageSended ?
                 <div className={styles.box}>
                     <div className={styles.boxContent}>
-                        <div className={styles.boxTitleEmphasis}>
-                            Message successifully sended!
+                        <div className={styles.boxTitle}>
+                            Message Sent
                         </div>
+                        <div className={styles.boxSuccessfullyTitleEmphasis}>
+                            successfully
+                        </div>
+                        <div className={styles.boxSubtitle}>
+                            We will contact you as soon as possible!
+                        </div>
+                        <button className={styles.sendButton} onClick={handleSendOtherMessage}>
+                            <h6 className={styles.sendButtonTitle}>Send new Message</h6>
+                        </button>
                     </div>
                 </div>
             :
