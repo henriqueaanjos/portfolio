@@ -32,7 +32,7 @@ const contactSchema = yup.object({
 });
 
 const Contact = () => {
-    const [messageSended, setMessageSended] = useState(true);
+    const [messageSended, setMessageSended] = useState(false);
 
     const {control, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(contactSchema)
