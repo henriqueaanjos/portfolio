@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 import './globals.css'
 
@@ -54,7 +55,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#1C1C28"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="#1C1C28"/>
       </head>
-      <body >{children}</body>
+      <body >
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
