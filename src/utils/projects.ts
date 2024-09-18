@@ -49,7 +49,7 @@ export const projects = [
         color: '#8047F8',
         title: 'Coffee Delivery',
         thumbnail: '/thumbnails/coffeeDelivery.png',
-        description: 'Mantenha suas finanças sob controle com nosso aplicativo de gerenciamento financeiro! Registre suas despesas e receitas em categorias personalizáveis e tenha uma visão clara do seu orçamento. Com relatórios detalhados, você pode acompanhar seu progresso financeiro e tomar decisões inteligentes para economizar mais e gastar melhor. Simplifique sua vida financeira e alcance suas metas com facilidade!',
+        description: 'Tenha seu café favorito entregue diretamente à sua porta com nosso aplicativo de delivery de café! Escolha entre uma variedade de bebidas deliciosas, desde os clássicos até criações especiais, tudo preparado com ingredientes frescos e de alta qualidade. Personalize seu pedido conforme suas preferências e receba sua dose de energia a qualquer hora, em qualquer lugar. Com entrega rápida e fácil, você nunca mais vai precisar sair para buscar o café perfeito!',
         tecnologies: [
             {
                 id: 1,
