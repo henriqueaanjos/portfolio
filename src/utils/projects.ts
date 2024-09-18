@@ -45,6 +45,50 @@ export const projects = [
     },
     {
         id: 2,
+        icon: '/icons/coffeeDelivery.svg',
+        color: '#8047F8',
+        title: 'Coffee Delivery',
+        thumbnail: '/thumbnails/coffeeDelivery.png',
+        description: 'Mantenha suas finanças sob controle com nosso aplicativo de gerenciamento financeiro! Registre suas despesas e receitas em categorias personalizáveis e tenha uma visão clara do seu orçamento. Com relatórios detalhados, você pode acompanhar seu progresso financeiro e tomar decisões inteligentes para economizar mais e gastar melhor. Simplifique sua vida financeira e alcance suas metas com facilidade!',
+        tecnologies: [
+            {
+                id: 1,
+                name: 'React Native',
+                icon: 'https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg'
+            },
+            {
+                id: 2,
+                name: 'Expo',
+                icon: 'https://bitrise-steplib-collection.s3.amazonaws.com/steps/expo-detach/assets/icon.svg'
+            },
+            {
+                id: 3,
+                name: 'React Native Reanimated',
+                icon: 'https://docs.swmansion.com/react-native-reanimated/img/logo-hero.svg'
+            },
+            {
+                id: 4,
+                name: 'React Native Gesture Handler',
+                icon: 'https://avatars.githubusercontent.com/u/56880679?s=48&v=4'
+            },
+            {
+                id: 5,
+                name: 'React Native Skia',
+                icon: 'https://user-images.githubusercontent.com/306134/146549218-b7959ad9-0107-4c1c-b439-b96c780f5230.png'
+            },
+            {
+                id: 6,
+                name: 'React Navigation',
+                icon: 'https://avatars.githubusercontent.com/u/29647600?s=280&v=4'
+            },
+            
+        ],
+        difficulty: 5,
+        githubUrl: 'https://github.com/henriqueaanjos/coffeeDelivery',
+        figmaUrl: 'https://www.figma.com/design/ZlZqFbIDKdDu6RptuMyWi8/Coffee-Delivery-%E2%80%A2-Desafio-React-Native-(Community)?node-id=2-12&t=217DCxG8L1lpbH1q-1'
+    },
+    {
+        id: 3,
         icon: '/icons/rentX.svg',
         color: '#1B1B1F',
         title: 'rentX',
@@ -87,7 +131,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/e8Kkb8QImQV0Z0F8WXkgju/RentX-Ignite---Offline-First?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 3,
+        id: 4,
         icon: '/icons/proffy.svg',
         color: '#8257E5',
         title: 'Proffy',
@@ -130,7 +174,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/yd3jWIenoW3tTTdoTp5gHh/Proffy-Mobile-2.0-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 4,
+        id: 5,
         icon: '/icons/marketSpace.svg',
         color: '#EDECEE',
         title: 'Marketspace',
@@ -178,7 +222,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/1WL7CwU7fdc7ZqzFOACErU/Marketspace-%E2%80%A2-Desafio-React-Native-(Copy)-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 5,
+        id: 6,
         icon: '/icons/igniteGym.svg',
         color: '#121214',
         title: 'Ignite Gym',
@@ -226,7 +270,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/7h7yrDlFggMfhmK0EnEJ9n/Ignite-Gym-(Community)-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 6,
+        id: 7,
         icon: '/icons/streamData.svg',
         color: '#9146FF',
         title: 'stream.Data',
@@ -259,7 +303,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/neELzx5ARh1XMOoDAFzOYv/stream.data-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 7,
+        id: 8,
         icon: '/icons/todoList.svg',
         color: '#191919',
         title: 'Todo List',
@@ -287,7 +331,7 @@ export const projects = [
         figmaUrl: 'https://www.figma.com/design/2dSEubG4BkV0UocpseXEVX/ToDo-List-%E2%80%A2-Desafio-React-Native-(Copy)?m=auto&t=FYo1SPhancm0GHYy-6'
     },
     {
-        id: 8,
+        id: 9,
         icon: '/icons/dailyDiet.svg',
         color: '#FAFAFA',
         title: 'Daily Diet',
@@ -331,7 +375,7 @@ export const projects = [
     },
     
     {
-        id: 9,
+        id: 10,
         icon: '/icons/igniteTeams.svg',
         color: '#202024',
         title: 'Ignite Teams',
