@@ -29,7 +29,7 @@
   @apply w-full bg-gradient-to-r from-initial to-final pb-1;
 }
 .quote {
-  @apply w-full bg-quote py-4 px-10 mt-8 flex items-center justify-center md:py-16 md:px-20;
+  @apply w-full bg-quote py-4  mt-8 flex flex-col items-center justify-center md:py-16  ;
 }
 .quoteText{
     @apply text-white font-medium text-xl text-center;

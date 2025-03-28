@@ -1,22 +1,17 @@
 'use client'
 
-import React, { FormEvent, useEffect, useState } from 'react';
-import Image from 'next/image';
-import * as Three from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-
-import styles from './styles.module.css';
-
-import worldSVG from '../../../public/world.svg';
-import EarthCanvas from '@/components/EarthCanvas';
-import StarsCanvas from '@/components/StarsCanvas';
-import { EmailTemplate } from '@/components/EmailTemplate';
-
+import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+
+import styles from './styles.module.css';
+
+import EarthCanvas from '@/components/EarthCanvas';
 import Input from '@/components/Input';
 import Textarea from '@/components/Textarea';
+import { useLanguage } from '@/hooks/useLanguage';
+import { translations } from '@/utils/translations';
 
 
 interface FormData {
@@ -30,13 +25,15 @@ const contactSchema = yup.object({
     email: yup.string().email('Digit a valid email!').required('Your email is required!'),
     message: yup.string().nonNullable().required('Your message is required!')
 });
-
-const Contact = () => {
+ 
+export default function Contact(){
     const [messageSended, setMessageSended] = useState(false);
 
     const {control, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(contactSchema)
     });
+
+    const { language } = useLanguage();
 
 
     async function onSubmit({name, email, message}: FormData){
@@ -61,35 +58,37 @@ const Contact = () => {
                 <div className={styles.box}>
                     <div className={styles.boxContent}>
                         <div className={styles.boxTitle}>
-                            Message Sent
+                            {translations[language].contact.successfullTitle}
                         </div>
                         <div className={styles.boxSuccessfullyTitleEmphasis}>
-                            successfully
+                            {translations[language].contact.successfullEmphasis}
                         </div>
                         <div className={styles.boxSubtitle}>
-                            We will contact you as soon as possible!
+                            {translations[language].contact.successfullSubtitle}
                         </div>
                         <button className={styles.sendButton} onClick={handleSendOtherMessage}>
-                            <h6 className={styles.sendButtonTitle}>Send new Message</h6>
+                            <h6 className={styles.sendButtonTitle}>
+                                {translations[language].contact.sucessfullButton}
+                            </h6>
                         </button>
                     </div>
                 </div>
             :
             <div className={styles.box}>
                 <div className={styles.boxTitle}>
-                    Get in Touch
+                    {translations[language].contact.title}
                 </div>
-                <div className={styles.boxTitleEmphasis}>Contact</div>
+                <div className={styles.boxTitleEmphasis}>{translations[language].contact.emphasis}</div>
                 <div className={styles.boxContent}>
                     <div className={styles.field}>
-                        <div className={styles.label}>Name</div>
+                        <div className={styles.label}>{translations[language].contact.labels[0]}</div>
                         <Controller
                             name='name'
                             control={control}
                             render={({field: {onChange, value}}) => 
                                 <Input 
                                     type="text" 
-                                    placeholder="What's your name?"
+                                    placeholder={translations[language].contact.placeholder[0]}
                                     value={value}
                                     onChange={onChange}
                                     errorMessage={errors.name?.message}
@@ -99,14 +98,14 @@ const Contact = () => {
                         
                     </div>
                     <div className={styles.field}>
-                        <div className={styles.label}>Email</div>
+                        <div className={styles.label}>{translations[language].contact.labels[1]}</div>
                         <Controller
                             name='email'
                             control={control}
                             render={({field: {onChange, value}}) => 
                                 <Input 
                                     type="text" 
-                                    placeholder="What's your email?"
+                                    placeholder={translations[language].contact.placeholder[1]}
                                     value={value}
                                     onChange={onChange}
                                     errorMessage={errors.email?.message}
@@ -115,13 +114,13 @@ const Contact = () => {
                         />
                     </div>
                     <div className={styles.field}>
-                        <div className={styles.label}>Message</div>
+                        <div className={styles.label}>{translations[language].contact.labels[2]}</div>
                         <Controller
                             name='message'
                             control={control}
                             render={({field: {onChange, value}}) => 
                                 <Textarea
-                                    placeholder="What's your message?"
+                                    placeholder={translations[language].contact.placeholder[2]}
                                     value={value}
                                     onChange={onChange}
                                     errorMessage={errors.message?.message}
@@ -130,7 +129,7 @@ const Contact = () => {
                         />
                     </div>
                     <button className={styles.sendButton} onClick={handleSubmit(onSubmit)}>
-                        <h6 className={styles.sendButtonTitle}>Send</h6>
+                        <h6 className={styles.sendButtonTitle}>{translations[language].contact.button}</h6>
                     </button>
                 </div>
             </div>
@@ -139,9 +138,6 @@ const Contact = () => {
             <div className={styles.canvas}>
                 <EarthCanvas/>
             </div>
-            
-            {/* <Image src={worldSVG} alt="World"/> */}
         </div>
     );
 }
-export default Contact;

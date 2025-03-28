@@ -3,8 +3,6 @@
 import React, { useRef } from 'react';
 
 import styles from './styles.module.css';
-import CommentCard from '@/components/CommentCard';
-import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import Carrousel from '@/components/Carrousel';
 import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
@@ -34,25 +32,25 @@ const Testimonials = () => {
                         </svg>
                         <Link href="">
                             <FaTwitter
-                                size='2rem'
+                                size={32}
                                 style={{fill: "url(#gradient)"}}
                             />
                         </Link>
                         <Link href="">
                             <FaInstagram
-                                size='2rem'
+                                size={32}
                                 style={{fill: "url(#gradient)"}}
                             />
                         </Link>
                         <Link href="">
                             <FaGithub
-                                size='2rem'
+                                size={32}
                                 style={{fill: "url(#gradient)"}}
                             />
                         </Link>
                         <Link href="">
                             <FaLinkedin
-                                size='2rem'
+                                size={32}
                                 style={{fill: "url(#gradient)"}}
                             />
                         </Link>

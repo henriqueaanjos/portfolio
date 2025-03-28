@@ -8,7 +8,7 @@ import { Object3D } from 'three/src/core/Object3D';
 import { AmbientLight, HemisphereLight, Light } from 'three';
 
 const Earth = () => {
-    const earth = useGLTF('/earth-2/scene.gltf');
+    const earth = useGLTF('/earth/scene.gltf');
     return(
         <primitive
             object={earth.scene}

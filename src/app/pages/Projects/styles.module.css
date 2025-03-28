@@ -11,13 +11,13 @@
   @apply absolute h-full w-full;
 }
 .slideLight{
-    @apply  w-full flex flex-col items-center justify-evenly md:flex-row py-10 bg-[url('../../../../public/doted.svg')] bg-cover;
+    @apply  w-full min-h-screen flex flex-col items-center justify-evenly md:flex-row py-10 bg-[url('../../../assets/doted.svg')] bg-cover;
 }
 .slideDark{
-    @apply w-full flex flex-col items-center justify-evenly md:flex-row py-10  bg-[url('../../../../public/doted_dark.svg')] bg-cover;
+    @apply w-full min-h-screen flex flex-col items-center justify-evenly md:flex-row py-10  bg-[url('../../../assets/doted_dark.svg')] bg-cover;
 }
 .appDetails {
-  @apply w-80 hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20;
+  @apply max-w-80 hidden lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-8 mx-20;
 }
 .appLogoLarger {
   @apply h-14 w-auto p-0 relative;
@@ -34,8 +34,11 @@
 .iphone {
   @apply w-[15rem] md:w-[25rem];
 }
+.desktop {
+  @apply w-[25rem] md:w-[35rem] cursor-pointer;
+}
 .appDetailsTech {
-  @apply w-80 h-auto flex flex-col items-start justify-between gap-[3rem] mx-20 md:gap-40;
+  @apply max-w-80 h-auto flex flex-col items-start justify-between gap-[3rem] mx-20 md:gap-40;
 }
 .difficulty {
   @apply w-full flex flex-row items-center justify-center md:justify-start;
@@ -47,7 +50,7 @@
   @apply font-medium text-lg text-black;
 }
 .techs {
-  @apply w-80 h-auto hidden lg:inline;
+  @apply max-w-80 h-auto hidden lg:inline;
 }
 .techBadges {
   @apply flex flex-wrap gap-4 mt-6;
@@ -59,7 +62,7 @@
   @apply w-fit px-3 py-2 bg-cards rounded-2xl text-white;
 }
 .buttons {
-  @apply w-80 h-auto flex items-center justify-center flex-wrap gap-x-4;
+  @apply max-w-80 h-auto flex items-center justify-center flex-wrap gap-x-4;
 }
 .techModalContent {
   @apply flex items-center justify-start gap-2;
@@ -70,4 +73,12 @@
 
 .images{
   @apply w-full
+}
+
+.switchContainer{
+  @apply w-full flex items-center justify-end py-1 px-4 absolute
+}
+
+.switchContainer section{
+  @apply flex items-center bg-slate-950 bg-opacity-20 gap-2 p-2 rounded-md
 }

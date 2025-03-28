@@ -3,37 +3,39 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import { GradientText } from '@/components/GradientText';
+import { CarrouselTechs } from '@/components/CarrouselTechs';
 
-import Me from '../../../../public/me.svg';
+import Me from '@/assets/me.svg';
+
+import { translations } from '@/utils/translations';
+
+import { useLanguage } from '@/hooks/useLanguage';
 
 import styles from './styles.module.css';
 
-const Overview = () => {
+export default function Overview(){
+    const {language} = useLanguage();
     return(
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <GradientText text='Overview'/>
+                <GradientText text={translations[language].overview.title}/>
             </div>
             <div className={styles.content}>
                 <div className={styles.info}>
                     <div className={styles.infoHeader}>
                         <h1 className={styles.infoTitle}>
-                            Sou o Henrique,
+                            {translations[language].overview.hero}
                         </h1>
                         <h3 className={styles.infoSubtitle}>
-                            e este é o meu portfólio digital!
+                            {translations[language].overview.subtitle}
                         </h3>
                     </div>
                     <p className={styles.infoDescription}>
-                        Meu nome é Henrique Anjos, tenho 25 anos e sou um entusiasta do desenvolvimento mobile, especialmente com React Native. Graduado em Ciências da Computação pela UFMS, além de ter uma formação em Informática pelo IFMS.
-                        <br/><br/>
-                        Trabalho nesse mundo do desenvolvimento desde 2019, mas minha paixão pela programação começou há 10 anos - sim, é muita história pra contar!
-                        <br/><br/>
-                        Minha especialidade é solucionar problemas e dar vida as suas ideias! Já pensou naquele projeto digital que agregaria valor a sua empresa ou negócio? Ou então algo que automatizaria sua vida ? Que tal ressuscitar esse sonho? Pode ser a chance de ver aquela ideia genial finalmente decolar!
-                        <br/><br/>
-                        E falando em decolar, se você está aí, refazendo as mesmas coisas e desejando ter mais tempo para diversão ou família, vamos mudar isso! Imagine quanto tempo você pode ganhar!
-                        <br/><br/>
-                        Fique à vontade para explorar meus projetos!
+                        {translations[language].overview.description.map(item => (
+                           <> 
+                            {item} <br/> <br/>
+                           </>
+                        ))}
                     </p>
                 </div>
                 <Image src={Me} alt='Me' className={styles.image}/>
@@ -61,11 +63,12 @@ const Overview = () => {
             >
                 <div className={styles.quote}>
                     <span className={styles.quoteText}>
-                        Estou aqui para ajudar suas ideias a ganharem vida! Entre em contato e vamos criar algo incrível juntos!
+                        {translations[language].overview.quote}
                     </span>
+                    <CarrouselTechs/>
                 </div>
+                
             </motion.div>
         </div>
     );
 }
-export default Overview;

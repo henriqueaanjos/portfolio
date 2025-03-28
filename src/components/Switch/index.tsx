@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './styles.module.css';
 
 interface SwitchProps{
-    setValue: (value: string) => void
+    setValue: (value: "mobile" | "web") => void
 }
 
 const spring = {

@@ -18,7 +18,7 @@ const DifficultyRanking = ({difficulty}:DifficultyRankingProps) => {
                 new Array(difficulty).fill(1).map((_, index) => 
                     <FaStar 
                         key={index}
-                        size='2rem'
+                        size={32}
                         style={{fill: "url(#gradient)" }}
                     />
                 )

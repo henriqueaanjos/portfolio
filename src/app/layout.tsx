@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react"
 import './globals.css'
 
 import localFont from 'next/font/local'
+import { LangugageContextProvider } from '@/context/languageContext';
 
 const SFPro = localFont({
   src:[
@@ -56,7 +57,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="#1C1C28"/>
       </head>
       <body >
-        {children}
+        <LangugageContextProvider>
+          {children}
+        </LangugageContextProvider>
         <Analytics />
       </body>
     </html>

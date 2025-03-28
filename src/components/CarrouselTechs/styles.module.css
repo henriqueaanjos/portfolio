@@ -1,0 +1,28 @@
+.swiper{
+    @apply w-full mt-4 py-5
+}
+
+
+.title{
+    @apply text-base py-2 px-4 bg-slate-950 text-white rounded-md mt-6 whitespace-nowrap
+}
+
+.wrapper{
+    @apply w-fit p-4 bg-slate-500 rounded-full mx-auto
+}
+
+.wrapper img{
+    @apply w-10 h-10 grayscale
+}
+
+.wrapper_active{
+    @apply w-fit p-4 rounded-full bg-slate-900 scale-110 md:scale-150
+}
+
+.wrapper_active img{
+    @apply w-10 h-10 grayscale-0
+}
+
+.wrapper:hover{
+    @apply wrapper_active
+}
